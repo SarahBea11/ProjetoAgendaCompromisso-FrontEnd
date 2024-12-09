@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
@@ -13,12 +14,14 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     AppComponent,
     AgendaComponent,
     InicioComponent,
-    NavBarComponent
+    NavBarComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
   ],
   providers: [
     provideClientHydration()

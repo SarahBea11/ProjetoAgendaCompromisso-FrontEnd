@@ -1,1 +1,21 @@
 <h4>Informações da Agenda</h4>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Local</th>
+        <th scope="col">Data</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let agenda of agendas">
+          <th>{{agenda.id}}</th>
+          <th>{{agenda.namecommitment}}</th>
+          <td>{{agenda.localcommitment}}</td>
+          <td>{{agenda.date}}</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
