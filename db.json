@@ -1,19 +1,32 @@
 {
-  "posts": [
+  "Agenda ": [
+
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "namecommitment": "Salao de Beleza",
+      "localcommitment": "Avenida das Laranjeiras, 100, Itu-SP",
+      "date": "08/12/2024"
+    },
+
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "namecommitment": "Prova de Economia",
+      "localcommitment": "Fatec Itu",
+      "date": "09/12/2024"
+    },
+
+    {
+      "id": 3,
+      "namecommitment": "Dentista",
+      "localcommitment": "Rua Floriano Peixoto, 884 - Centro, Itu-SP",
+      "date": "11/12/2024"
+    },
+    
+    {
+      "id": 4,
+      "namecommitment": "Cinema",
+      "localcommitment": "Plaza Shopping Itu",
+      "date": "14/12/2024"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
