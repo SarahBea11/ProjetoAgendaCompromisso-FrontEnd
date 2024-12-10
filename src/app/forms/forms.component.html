@@ -1,0 +1,20 @@
+<div class="container">
+  <h3>Cadastrar Livro</h3>
+  <form [formGroup]="formGroupAgendas">
+    <div class="mb-3">
+      <label for="name" class="form-label">Nome </label>
+      <input formControlName="titulo" type="text " class="form-control" id="titulo" placeholder="Digite o Titulo">
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Local</label>
+      <input formControlName="autor" type="text " class="form-control" id="autor" placeholder="Digite o nome do autor">
+    </div>
+    <div class="mb-3">
+      <label for="category" class="form-label">Data</label>
+      <input formControlName="genero" type="text " class="form-control" id="genero" placeholder="Digite o genero do livro">
+    </div>
+  
+    <button type="button" class="btn btn-primary" (click)="save()">Registrar Compromisso</button>
+  </form>
+</div>
+

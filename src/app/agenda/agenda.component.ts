@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AgendasService } from './../agendas.service';
 import { Agendas} from './agenda'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-agenda',
@@ -9,12 +10,22 @@ import { Agendas} from './agenda'
 })
 export class AgendaComponent {
   agendas: Agendas[] = []
-  constructor(private service: AgendasService){}
+
+  constructor(private service: AgendasService, private router: Router){}
   ngOnInit(): void{
-    this.loadBooks();
+    this.loadAgendas();
   }
-  loadBooks(){
+  loadAgendas(){
     this.service.getAgendas().subscribe({
       next: data => this.agendas = data
     })
-  }}
+  }
+  delete(agendas: Agendas){
+    this.service.delete(agendas).subscribe({
+      next: ()=> this.loadAgendas()
+    })
+  }
+  create(){
+    this.router.navigate(['agendas-form'])
+  }
+}
