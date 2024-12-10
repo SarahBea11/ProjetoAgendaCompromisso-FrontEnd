@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AgendasService } from './../agendas.service';
-import { Agendas} from './agenda'
 import { Router } from '@angular/router';
+import { Agendas } from '../agendas';
 
 @Component({
   selector: 'app-agenda',
@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrl: './agenda.component.css'
 })
 export class AgendaComponent {
+
   agendas: Agendas[] = []
 
   constructor(private service: AgendasService, private router: Router){}

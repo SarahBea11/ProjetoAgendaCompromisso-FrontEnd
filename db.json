@@ -1,5 +1,5 @@
 {
-  "Agenda ": [
+  "Agendas": [
 
     {
       "id": 1,
@@ -21,7 +21,7 @@
       "localcommitment": "Rua Floriano Peixoto, 884 - Centro, Itu-SP",
       "date": "11/12/2024"
     },
-    
+
     {
       "id": 4,
       "namecommitment": "Cinema",
