@@ -27,6 +27,13 @@ export class FormsComponent {
       next: () => this.router.navigate(['agendas']),
     });
   }
+   update() {
+      this.service.update(this.formGroupAgendas.value).subscribe({
+        next:()=> this.router.navigate(['agendas']),
+      });
+    }
+
+  }
 
 
-}
+

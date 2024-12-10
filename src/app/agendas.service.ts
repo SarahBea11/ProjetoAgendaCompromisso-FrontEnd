@@ -15,12 +15,16 @@ export class AgendasService {
   }
 
   delete(agendas: Agendas): Observable<void> {
-    return this.http.delete<void>('http://localhost:3000/agendas/' + agendas.id);
+    return this.http.delete<void>(
+      'http://localhost:3000/agendas/' + agendas.id
+    );
   }
 
   save(agendas: Agendas): Observable<Agendas> {
     return this.http.post<Agendas>('http://localhost:3000/agendas', agendas);
   }
 
-
+  update(agendas: Agendas): Observable<Agendas> {
+    return this.http.put<Agendas>('http://localhost:3000/agendas/' + agendas.id, agendas);
+  }
 }

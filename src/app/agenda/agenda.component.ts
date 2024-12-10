@@ -30,4 +30,8 @@ export class AgendaComponent {
   create() {
     this.router.navigate(['forms']);
   }
-}
+  update() {
+    this.router.navigate(['agenda']);
+    }
+  }
+
