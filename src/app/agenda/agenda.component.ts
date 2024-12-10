@@ -28,6 +28,6 @@ export class AgendaComponent {
     });
   }
   create() {
-    this.router.navigate(['agendas-form']);
+    this.router.navigate(['forms']);
   }
 }

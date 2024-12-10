@@ -6,24 +6,27 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-forms',
   templateUrl: './forms.component.html',
-  styleUrl: './forms.component.css'
+  styleUrl: './forms.component.css',
 })
 export class FormsComponent {
   formGroupAgendas: FormGroup;
-  constructor(private FormBuilder: FormBuilder, private service: AgendasService, private router: Router){
-
+  constructor(
+    private FormBuilder: FormBuilder,
+    private service: AgendasService,
+    private router: Router
+  ) {
     this.formGroupAgendas = FormBuilder.group({
       id: [''],
       namecommitment: [''],
-      localcommitment:[''],
+      localcommitment: [''],
       date: [''],
-
-    })
-
+    });
   }
-  save(){
+  save() {
     this.service.save(this.formGroupAgendas.value).subscribe({
-      next:()=> this.router.navigate(['agendas'])
-    })
+      next: () => this.router.navigate(['agendas']),
+    });
   }
+
+
 }
