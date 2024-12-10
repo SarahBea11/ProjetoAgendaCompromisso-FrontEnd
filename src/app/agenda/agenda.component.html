@@ -10,13 +10,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let agenda of agendas">
-          <th>{{agenda.id}}</th>
-          <th>{{agenda.namecommitment}}</th>
-          <td>{{agenda.localcommitment}}</td>
-          <td>{{agenda.date}}</td>
-          <td><button class="btn btn-danger" (click)="delete(agenda)">Remover</button></td>
-
+      <tr *ngFor="let Agendas of agenda">
+          <th>{{Agendas.id}}</th>
+          <th>{{Agendas.namecommitment}}</th>
+          <td>{{Agendas.localcommitment}}</td>
+          <td>{{Agendas.date}}</td>
+<td><button class="btn btn-danger" (click)="delete(Agendas)">Remover</button></td>
         </tr>
         <button class="btn btn-primary"(click)="create()">Novo</button>
     </tbody>

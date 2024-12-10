@@ -7,7 +7,7 @@ import { FormsComponent } from './forms/forms.component';
 const routes: Routes = [
   {path: '', redirectTo: '/inicio', pathMatch: 'full'},
   {path: 'inicio', component: InicioComponent},
-  {path: 'agenda', component: AgendaComponent},
+  {path: 'agendas', component: AgendaComponent},
   {path: 'forms', component: FormsComponent}
 
 ];

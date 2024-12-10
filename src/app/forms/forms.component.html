@@ -1,20 +1,20 @@
 <div class="container">
-  <h3>Cadastrar Livro</h3>
+  <h3>Registrar Compromisso</h3>
   <form [formGroup]="formGroupAgendas">
     <div class="mb-3">
-      <label for="name" class="form-label">Nome </label>
-      <input formControlName="titulo" type="text " class="form-control" id="titulo" placeholder="Digite o Titulo">
+      <label for="namecommitment" class="form-label">Nome </label>
+      <input formControlName="namecommitment" type="text " class="form-control" id="namecommitment" placeholder="Digite o Nome">
     </div>
     <div class="mb-3">
-      <label for="price" class="form-label">Local</label>
-      <input formControlName="autor" type="text " class="form-control" id="autor" placeholder="Digite o nome do autor">
+      <label for="localcommitment" class="form-label">Local</label>
+      <input formControlName="localcommitment" type="text " class="form-control" id="localcommitment" placeholder="Digite o Local">
     </div>
     <div class="mb-3">
-      <label for="category" class="form-label">Data</label>
-      <input formControlName="genero" type="text " class="form-control" id="genero" placeholder="Digite o genero do livro">
+      <label for="date" class="form-label">Data</label>
+      <input formControlName="date" type="text " class="form-control" id="date" placeholder="Digite a Data">
     </div>
-  
-    <button type="button" class="btn btn-primary" (click)="save()">Registrar Compromisso</button>
+
+    <button type="button" class="btn btn-primary" (click)="save()">Salvar Compromisso</button>
   </form>
 </div>
 

@@ -14,9 +14,9 @@ export class FormsComponent {
 
     this.formGroupAgendas = FormBuilder.group({
       id: [''],
-      nomecompromisso: [''],
-      localcompromisso: [''],
-      data: [''],
+      namecommitment: [''],
+      localcommitment:[''],
+      date: [''],
 
     })
 

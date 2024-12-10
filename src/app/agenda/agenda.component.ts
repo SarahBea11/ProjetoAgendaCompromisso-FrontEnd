@@ -4,29 +4,30 @@ import { Router } from '@angular/router';
 import { Agendas } from '../agendas';
 
 @Component({
-  selector: 'app-agenda',
+  selector: 'app-agendas',
   templateUrl: './agenda.component.html',
-  styleUrl: './agenda.component.css'
+  styleUrl: './agenda.component.css',
 })
 export class AgendaComponent {
+  agenda: Agendas[] = [];
 
-  agendas: Agendas[] = []
-
-  constructor(private service: AgendasService, private router: Router){}
-  ngOnInit(): void{
+  constructor(private service: AgendasService, private router: Router) {}
+  ngOnInit(): void {
     this.loadAgendas();
   }
-  loadAgendas(){
+
+  loadAgendas() {
     this.service.getAgendas().subscribe({
-      next: data => this.agendas = data
-    })
+      next: (data) => (this.agenda = data),
+    });
   }
-  delete(agendas: Agendas){
-    this.service.delete(agendas).subscribe({
-      next: ()=> this.loadAgendas()
-    })
+
+  delete(agenda: Agendas) {
+    this.service.delete(agenda).subscribe({
+      next: () => this.loadAgendas(),
+    });
   }
-  create(){
-    this.router.navigate(['agendas-form'])
+  create() {
+    this.router.navigate(['agendas-form']);
   }
 }
