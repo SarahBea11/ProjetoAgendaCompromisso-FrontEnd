@@ -8,23 +8,27 @@ import { Agendas } from './agendas';
   providedIn: 'root',
 })
 export class AgendasService {
+
+  url='http://localhost:8080/agenda';
+
   constructor(private http: HttpClient) {}
 
   getAgendas(): Observable<Agendas[]> {
-    return this.http.get<Agendas[]>('http://localhost:3000/agendas');
+    return this.http.get<Agendas[]>(this.url);
   }
 
-  delete(agendas: Agendas): Observable<void> {
-    return this.http.delete<void>(
-      'http://localhost:3000/agendas/' + agendas.id
-    );
+  delete(agenda: Agendas): Observable<void> {
+    return this.http.delete<void>(`${this.url}/${agenda.id}`);
+
+  }getAgendasById(id:number): Observable<Agendas>{
+    return this.http.get<Agendas>(`${this.url}/${id}`);
+    }
+
+  save(agenda: Agendas): Observable<Agendas> {
+    return this.http.post<Agendas>(this.url, agenda);
   }
 
-  save(agendas: Agendas): Observable<Agendas> {
-    return this.http.post<Agendas>('http://localhost:3000/agendas', agendas);
-  }
-
-  update(agendas: Agendas): Observable<Agendas> {
-    return this.http.put<Agendas>('http://localhost:3000/agendas/' + agendas.id, agendas);
+  update(agenda: Agendas): Observable<Agendas> {
+    return this.http.put<Agendas>(`${this.url}/${agenda.id}`, agenda);
   }
 }

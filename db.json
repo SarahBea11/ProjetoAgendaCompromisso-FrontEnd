@@ -1,3 +1,10 @@
 {
-  "Agendas": []
+  "Agendas": [
+    {
+      "id": 1,
+      "namecommitment": "aaa",
+      "localcommitment": "aaa",
+      "date": "aaaaaaa"
+    }
+  ]
 }
